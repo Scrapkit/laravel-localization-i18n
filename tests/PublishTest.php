@@ -7,7 +7,7 @@ it('publishes the frontend stubs', function () {
     $files = new Filesystem;
     $files->deleteDirectory($target);
 
-    $this->artisan('vendor:publish', ['--tag' => 'laravel-localization-i18n-frontend'])
+    $this->artisan('vendor:publish', ['--tag' => 'localization-i18n-frontend'])
         ->assertSuccessful();
 
     expect(file_exists("{$target}/index.ts"))->toBeTrue()
@@ -22,7 +22,7 @@ it('publishes the starter translations into the application lang path', function
     $files = new Filesystem;
     $files->delete(["{$langPath}/it/common.php", "{$langPath}/en/common.php"]);
 
-    $this->artisan('vendor:publish', ['--tag' => 'laravel-localization-i18n-translations'])
+    $this->artisan('vendor:publish', ['--tag' => 'localization-i18n-translations'])
         ->assertSuccessful();
 
     expect(file_exists("{$langPath}/it/common.php"))->toBeTrue()

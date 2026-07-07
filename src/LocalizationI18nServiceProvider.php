@@ -43,11 +43,11 @@ class LocalizationI18nServiceProvider extends PackageServiceProvider
         if ($this->app->runningInConsole()) {
             $this->publishes([
                 $this->package->basePath('/../resources/stubs/frontend') => resource_path('js/i18n'),
-            ], 'laravel-localization-i18n-frontend');
+            ], 'localization-i18n-frontend');
 
             $this->publishes([
                 $this->package->basePath('/../resources/lang') => $this->app->langPath(),
-            ], 'laravel-localization-i18n-translations');
+            ], 'localization-i18n-translations');
         }
     }
 

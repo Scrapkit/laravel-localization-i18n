@@ -26,13 +26,13 @@ The service provider is auto-discovered. Publish what you need:
 
 ```bash
 # Configuration
-php artisan vendor:publish --tag=laravel-localization-i18n-config
+php artisan vendor:publish --tag=localization-i18n-config
 
 # Starter translations (lang/it/common.php, lang/en/common.php)
-php artisan vendor:publish --tag=laravel-localization-i18n-translations
+php artisan vendor:publish --tag=localization-i18n-translations
 
 # Frontend stubs (resources/js/i18n/*.ts)
-php artisan vendor:publish --tag=laravel-localization-i18n-frontend
+php artisan vendor:publish --tag=localization-i18n-frontend
 ```
 
 For the frontend:
